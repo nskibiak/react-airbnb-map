@@ -1,5 +1,4 @@
 import React, { Component, Fragment } from 'react';
-import flats from '../data/flats';
 
 class Flat extends Component {
 
