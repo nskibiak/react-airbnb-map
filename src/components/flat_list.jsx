@@ -1,12 +1,12 @@
 import React from 'react';
 import Flat from './flat';
-import flats from '../data/flats';
+import flatsData from '../data/flats';
 
 const FlatList = () => {
-  const apts = flats;
+  const flats = flatsData;
   return (
     <div className="flat-list">
-      {apts.map((apt) => <Flat/> )}
+      {flats.map((flat) => <Flat flat={flat}/> )}
     </div>
   );
 };
