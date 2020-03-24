@@ -14,11 +14,15 @@ require('dotenv').config()
 
 class App extends Component {
 
+  renderFlat = () => {
+    console.log('you clicked in app.jsx')
+  }
+
   render() {
 
     return (
       <div>
-        <FlatList />
+        <FlatList renderFlat={this.renderFlat} />
         <div className='map-container'>
           <Map />
         </div>
