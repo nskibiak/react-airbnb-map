@@ -7,7 +7,7 @@
 // export default App;
 
 import React, { Component } from 'react';
-// import Flat from './flat';
+import Flat from './flat';
 
 class App extends Component {
 
@@ -15,7 +15,9 @@ class App extends Component {
 
     return (
       <div>
-        <div className='flat-list'>fart</div>
+        <div className='flat-list'>
+          <Flat />
+        </div>
         <div className='map-container'>another fart</div>
       </div>
     );
