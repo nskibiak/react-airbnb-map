@@ -3,6 +3,8 @@ import React, { Component, Fragment } from 'react';
 class Flat extends Component {
 
   handleClick = (event) => {
+    console.log(event.target.classList)
+    event.target.classList.toggle('clicked');
     this.props.renderFlat();
   }
 
@@ -11,14 +13,13 @@ class Flat extends Component {
 
     return (
       <Fragment>
-        <div class="card" style={{
+        <div className="card" style={{
           backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)), url(${flat.imageUrl})`
         }} onClick={this.handleClick} >
-          <div class="card-category">{flat.price} EUR</div>
-          <div class="card-description">
+          <div className="card-category">{flat.price} EUR</div>
+          <div className="card-description">
             <h2>{flat.name}</h2>
           </div>
-          <a class="card-link" href="#"></a>
         </div>
       </Fragment>
     );
