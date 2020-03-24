@@ -8,7 +8,7 @@ const AnyReactComponent = ({ text }) =>
     backgroundColor: 'red',
     height: '20px',
     width: '20px',
-    borderRadius: '100%',
+    borderRadius: '50%',
   }}>
     {text}
   </div>;
