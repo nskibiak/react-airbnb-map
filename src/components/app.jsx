@@ -8,6 +8,9 @@
 
 import React, { Component } from 'react';
 import Flat from './flat';
+import Map from './map';
+
+require('dotenv').config()
 
 class App extends Component {
 
@@ -18,7 +21,9 @@ class App extends Component {
         <div className='flat-list'>
           <Flat />
         </div>
-        <div className='map-container'>another fart</div>
+        <div className='map-container'>
+          <Map />
+        </div>
       </div>
     );
   }
