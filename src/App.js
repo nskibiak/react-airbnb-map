@@ -1,7 +1,7 @@
 import React from 'react';
 
 function App() {
-  return null;
+  return <p>"Help"</p>;
 }
 
 export default App;
