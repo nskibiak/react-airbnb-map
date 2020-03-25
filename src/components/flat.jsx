@@ -3,8 +3,7 @@ import React, { Component, Fragment } from 'react';
 class Flat extends Component {
 
   handleClick = (event) => {
-    console.log(event.target.classList)
-    event.target.classList.toggle('clicked');
+    console.log(event.target)
     this.props.renderFlat();
   }
 
@@ -20,6 +19,7 @@ class Flat extends Component {
           <div className="card-description">
             <h2>{flat.name}</h2>
           </div>
+          <a className="card-link" href="#"></a>
         </div>
       </Fragment>
     );
