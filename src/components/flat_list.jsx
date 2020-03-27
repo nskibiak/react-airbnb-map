@@ -6,7 +6,7 @@ const FlatList = ({ renderFlat }) => {
   const flats = flatsData;
   return (
     <div className="flat-list">
-      {flats.map((flat) => <Flat flat={flat} renderFlat={renderFlat} /> )}
+      {flats.map((flat, index) => <Flat flat={flat} renderFlat={renderFlat} key={index}/> )}
     </div>
   );
 };
