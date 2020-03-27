@@ -3,14 +3,13 @@ import GoogleMapReact from 'google-map-react';
 
 require('dotenv').config({ path: '../..' })
 
-const AnyReactComponent = ({ text }) =>
+const Marker = ( flat ) =>
   <div style={{
     backgroundColor: 'red',
     height: '20px',
     width: '20px',
     borderRadius: '50%',
   }}>
-    {text}
   </div>;
 
 class Map extends Component {
@@ -31,10 +30,9 @@ class Map extends Component {
           defaultCenter={this.props.center}
           defaultZoom={this.props.zoom}
         >
-          <AnyReactComponent
-            lat={48.8566}
-            lng={2.3522}
-            text="My Marker"
+          <Marker
+            lat={this.props.lat}
+            lng={this.props.lng}
           />
         </GoogleMapReact>
       </div>
