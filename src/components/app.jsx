@@ -14,12 +14,11 @@ require('dotenv').config()
 
 class App extends Component {
 
-  renderFlat = (flat) => {
-    console.log('you clicked in app.jsx');
-    this.render(flat);
+  renderFlat = () => {
+    console.log('called');
   }
 
-  render(flat) {
+  render() {
 
     return (
       <div>
