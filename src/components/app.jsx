@@ -13,6 +13,15 @@ import Map from './map';
 require('dotenv').config()
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      lat: 48.8566,
+      lng: 2.3522
+      // selectedGifId: 'xT9IgDEI1iZyb2wqo8'
+    };
+  }
 
   renderFlat = (flat) => {
     console.log('in app.jsx');
@@ -25,7 +34,7 @@ class App extends Component {
       <div>
         <FlatList renderFlat={this.renderFlat} />
         <div className='map-container'>
-          <Map lat={48.8566} lng={2.3522}/>
+          <Map lat={this.state.lat} lng={this.state.lng}/>
         </div>
       </div>
     );
