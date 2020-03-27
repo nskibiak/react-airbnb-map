@@ -27,7 +27,7 @@ class App extends Component {
     this.setState({
       lat: flat.flat.lat,
       lng: flat.flat.lng,
-      selectedFlat: flat
+      selectedFlat: flat.flat
     });
   }
 
