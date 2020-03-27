@@ -2,9 +2,14 @@ import React, { Component, Fragment } from 'react';
 
 class Flat extends Component {
 
-  handleClick = (flat) => {
+  changeMarker = (flat) => {
     this.props.renderFlat(flat);
-    // console.log(flat.lat);
+    // console.log(this.event.target);
+  }
+
+  changeBorder = (event) => {
+    console.log('fired change border');
+    console.log(event.target)
   }
 
   render() {
@@ -15,8 +20,11 @@ class Flat extends Component {
         <div className="card" style={{
           backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)), url(${flat.imageUrl})`
         }}
-          // onClick={this.handleClick(this.props)}
-          onClick={(event) => {this.handleClick({flat})}}
+          // onClick={this.changeMarker(this.props)} // REMOVED THIS BECAUSE IT WAS FIRING FOR ALL FLATS ON RENDER
+          onClick={(event) => {
+            this.changeMarker({flat});
+            this.changeBorder();
+          }}
         >
           <div className="card-category">{flat.price} EUR</div>
           <div className="card-description">
