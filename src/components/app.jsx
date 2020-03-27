@@ -18,15 +18,16 @@ class App extends Component {
 
     this.state = {
       lat: 48.8566,
-      lng: 2.3522
-      // selectedGifId: 'xT9IgDEI1iZyb2wqo8'
+      lng: 2.3522,
+      selectedFlat: null
     };
   }
 
   renderFlat = (flat) => {
     this.setState({
       lat: flat.flat.lat,
-      lng: flat.flat.lng
+      lng: flat.flat.lng,
+      selectedFlat: flat
     });
   }
 
@@ -34,7 +35,7 @@ class App extends Component {
 
     return (
       <div>
-        <FlatList renderFlat={this.renderFlat} />
+        <FlatList renderFlat={this.renderFlat} selectedFlat={this.state.selectedFlat} />
         <div className='map-container'>
           <Map lat={this.state.lat} lng={this.state.lng}/>
         </div>
