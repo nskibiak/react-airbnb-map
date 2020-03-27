@@ -17,8 +17,8 @@ class App extends Component {
     super(props);
 
     this.state = {
-      lat: 48.8566,
-      lng: 2.3522,
+      lat: null,
+      lng: null,
       selectedFlat: null
     };
   }
