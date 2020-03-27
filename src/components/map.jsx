@@ -4,12 +4,7 @@ import GoogleMapReact from 'google-map-react';
 require('dotenv').config({ path: '../..' })
 
 const Marker = ( flat ) =>
-  <div style={{
-    backgroundColor: 'red',
-    height: '20px',
-    width: '20px',
-    borderRadius: '50%',
-  }}>
+  <div className='marker'>
   </div>;
 
 class Map extends Component {
