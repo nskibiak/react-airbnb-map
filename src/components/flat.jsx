@@ -2,9 +2,9 @@ import React, { Component, Fragment } from 'react';
 
 class Flat extends Component {
 
-  handleClick = (props) => {
-    // this.props.renderFlat();
-    console.log(props.flat.lat, props.flat.lng);
+  handleClick = (flat) => {
+    this.props.renderFlat(flat);
+    // console.log(flat.lat);
   }
 
   render() {
@@ -16,7 +16,7 @@ class Flat extends Component {
           backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)), url(${flat.imageUrl})`
         }}
           // onClick={this.handleClick(this.props)}
-          onClick={(event) => {this.handleClick(this.props)}}
+          onClick={(event) => {this.handleClick({flat})}}
         >
           <div className="card-category">{flat.price} EUR</div>
           <div className="card-description">

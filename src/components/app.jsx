@@ -14,8 +14,9 @@ require('dotenv').config()
 
 class App extends Component {
 
-  renderFlat = () => {
-    console.log('called');
+  renderFlat = (flat) => {
+    console.log('in app.jsx');
+    console.log(flat.flat.lat);
   }
 
   render() {
