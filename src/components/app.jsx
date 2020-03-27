@@ -24,8 +24,10 @@ class App extends Component {
   }
 
   renderFlat = (flat) => {
-    console.log('in app.jsx');
-    console.log(flat.flat.lat);
+    this.setState({
+      lat: flat.flat.lat,
+      lng: flat.flat.lng
+    });
   }
 
   render() {
